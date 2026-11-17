@@ -1,0 +1,30 @@
+/* Add to your global CSS (Tailwind v4). Lighter beige palette. */
+:root {
+  --bg: #f8f3ec;
+  --ink: #2c1c03;
+  --accent: #454931;
+  --muted: #6b6250;
+  --line: rgba(69, 73, 49, 0.22);
+  --shade: rgba(248, 243, 236, 0.66);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1b1c14;
+    --ink: #efe6d9;
+    --accent: #b9bf8a;
+    --muted: #a79f8b;
+    --line: rgba(185, 191, 138, 0.25);
+    --shade: rgba(27, 28, 20, 0.78);
+  }
+}
+@theme inline {
+  --color-bg: var(--bg);
+  --color-ink: var(--ink);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-shade: var(--shade);
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
